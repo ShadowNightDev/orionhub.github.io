@@ -31,7 +31,7 @@ const APPS = [
     iconClass: "icon-blue",
     cardClass: "blue",
     desc:      "Sleek music player & downloader. Multi-format, custom playlists, offline playback — 100% free.",
-    tags:      ["Music", "Streaming", "Player", "Downloader", "Windows"],
+    tags:      ["Music", "Streaming", "Windows"],
     status:    "live",
     repo:      "sonix",
     downloadUrl: null,
