@@ -4,9 +4,8 @@ const SECRET_KEY = "orion_hub_2026_x9A2";
 
 const DONATE = {
   saweria:  "https://saweria.co/Sonixmusic",
-  trakteer: "https://trakteer.id/YOUR_USERNAME",
-  paypal:   "https://paypal.me/YOUR_USERNAME",
-  ko:       "https://ko-fi.com/YOUR_USERNAME",
+  paypal:   "https://paypal.me/smartgaming",
+  ko:       "https://ko-fi.com/orionhub",
 };
 
 const SUPPORTERS = [
