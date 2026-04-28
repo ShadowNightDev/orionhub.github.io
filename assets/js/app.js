@@ -1,5 +1,5 @@
 
-const GAS_URL    = "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec";
+const GAS_URL    = "https://script.google.com/macros/s/AKfycbx5Sjitw6Tc8YVZC_zIn7NBLL4yzAhfgilY6vxe7iR16zYAmYxw4k_--XDt9bfo1Tc/exec";
 const SECRET_KEY = "orion_hub_2026_x9A2";
 
 const DONATE = {
