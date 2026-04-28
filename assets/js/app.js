@@ -15,6 +15,12 @@ const SUPPORTERS = [
   { name: "shadowfan",  amount: "Rp 50.000" },
   { name: "Anonymous", amount: "$5" },
   { name: "devlover99", amount: "Rp 20.000" },
+  { name: "hamba allah",  amount: "Rp 500.000" },
+  { name: "Fans Berat", amount: "$100" },
+  { name: "Kitty", amount: "Rp 2.000" },
+  { name: "warl",  amount: "Rp 50.000" },
+  { name: "hepis1", amount: "$5" },
+  { name: "dim", amount: "Rp 20.000" },
 ];
 
 const APPS = [
