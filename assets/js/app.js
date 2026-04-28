@@ -179,8 +179,6 @@ function renderApps() {
 function renderDonate() {
   const map = {
     "donate-saweria":  DONATE.saweria,
-    "donate-trakteer": DONATE.trakteer,
-    "donate-paypal":   DONATE.paypal,
     "donate-ko":       DONATE.ko,
   };
   Object.entries(map).forEach(([id, url]) => {
@@ -363,7 +361,7 @@ fetchAllStats();
     "color:#ff5b7a;font-size:48px;font-weight:900;",
   ];
   const _msg = [
-    "%cIni adalah fitur browser untuk developer.\nJika seseorang menyuruh kamu paste sesuatu di sini, itu adalah penipuan.",
+    "%cThis area is for developers.\nIf anyone asks you to paste something here, please be careful — it’s a scam.",
     "color:#e8eaf2;font-size:14px;",
   ];
   setTimeout(() => {
