@@ -44,7 +44,7 @@ const APPS = [
     icon:      "📡",
     iconClass: "icon-violet",
     cardClass: "violet",
-    desc:      "Lightweight streaming utility for seamless media consumption. Built for speed — launching soon.",
+    desc:      "Lightweight streaming utility for seamless media consumption.",
     tags:      ["Video","Streaming", "Windows"],
     status:    "live",
     repo:      "aetherstream",
@@ -52,6 +52,20 @@ const APPS = [
     githubUrl: "https://github.com/ShadowNightDev/AetherStream",
     progress:  null,
   },
+  {
+    id:        "orionplus",
+    name:      "Orion+",
+    icon:      "🎬",
+    iconClass: "icon-purple",
+    cardClass: "purple",
+    desc:      "Android app for streaming Live TV , MOvies And Shows",
+    tags:      ["Video","Streaming", "Android"],
+    status:    "live",
+    repo:      "orionplus",
+    downloadUrl: null,
+    githubUrl: "https://github.com/ShadowNightDev/OrionPlus",
+    progress:  null,
+  }
  
 ];
 
