@@ -90,7 +90,7 @@ function updateCardStats() {
   APPS.forEach(app => {
     const d = appData[app.repo];
     if (!d || !d.success) return;
-
+    
     const vEl = document.querySelector(`[data-card="${app.id}"] .meta-version`);
     if (vEl) vEl.textContent = d.version || "";
 
@@ -98,19 +98,28 @@ function updateCardStats() {
     if (dlEl) dlEl.textContent = formatNum(d.downloads) + " downloads";
 
     const btnEl = document.querySelector(`[data-card="${app.id}"] .btn-dl`);
-    if (btnEl && d.downloadUrl) {
-      btnEl.disabled = false;
-      btnEl.classList.remove("loading");
-      btnEl.dataset.url = d.downloadUrl;
-      btnEl.innerHTML = `
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path d="M12 3v13m-5-5 5 5 5-5"/><path d="M3 20h18"/>
-        </svg>
-        Download ${d.version || ""}
-      `;
+    if (btnEl) {
+      
+      const finalUrl = d.downloadUrl; 
+      
+      if (finalUrl) {
+        btnEl.disabled = false;
+        btnEl.classList.remove("loading");
+        btnEl.dataset.url = finalUrl;
+      
+        const labelText = d.apk ? "Download APK" : "Download";
+        
+        btnEl.innerHTML = `
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 3v13m-5-5 5 5 5-5"/><path d="M3 20h18"/>
+          </svg>
+          ${labelText} ${d.version || ""}
+        `;
+      }
     }
   });
 }
+
 
 function updateGlobalStats() {
   let totalDl = 0, totalStars = 0;
