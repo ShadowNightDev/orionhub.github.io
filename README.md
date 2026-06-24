@@ -4,7 +4,7 @@
 
 A beautifully crafted ecosystem of applications designed for performance, elegance, and absolute control over your entertainment.
 
-[**Visit the Website**](https://orionhub.github.io/)
+[**Visit the Website**](https://orionhub.site/)
 
 ---
 
