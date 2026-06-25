@@ -13,14 +13,14 @@
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://orionhub.site/">
+    <meta property="og:url" content="https://orionhub.github.io/">
     <meta property="og:title" content="Orion Hub | The Next Generation Media Platform">
     <meta property="og:description" content="A beautifully crafted ecosystem of applications designed for performance, elegance, and absolute control over your entertainment.">
     <meta property="og:image" content="https://orionhub.github.io/assets/preview.png">
 
     <!-- Twitter / Discord -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://orionhub.site/">
+    <meta property="twitter:url" content="https://orionhub.github.io/">
     <meta property="twitter:title" content="Orion Hub | The Next Generation Media Platform">
     <meta property="twitter:description" content="A beautifully crafted ecosystem of applications designed for performance, elegance, and absolute control over your entertainment.">
     <meta property="twitter:image" content="https://orionhub.github.io/assets/preview.png">
@@ -47,7 +47,23 @@
             <div class="nav-links">
                 <a href="#apps">Ecosystem</a>
                 <a href="https://t.me/orionhub_site" target="_blank">Telegram</a>
-                <div class="donate-group">
+                <a href="#donate" class="nav-donate-link">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <div class="badge reveal">
+                <span class="dot"></span>
+                Ecosystem Online
+            </div>
+            <h1 class="reveal">The new standard<br><span>for media streaming.</span></h1>
+                        <p class="reveal">A beautifully crafted ecosystem of applications designed for performance, elegance, and absolute control over your entertainment.</p>
+            
+            <div id="donate" class="hero-donate reveal">
+                <p class="donate-title">Support My Project</p>
+                <div class="donate-group inline-donate">
                     <a href="https://ko-fi.com/orionhub" target="_blank" class="btn-donate kofi">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.061-4.3-.037-.046-.054-.09-.054-.118-.015-.015-.024-.024-.024-.024-.209-.254-.255-.523-.225-.839.038-.909 1.139-1.675 2.028-1.122.887.55 1.242 1.213 1.242 1.213s.328-.464 1.077-1.162c1.247-1.147 2.653-.806 3.152-.25.541.59-.069 1.419-.069 1.419s.4-.52 1.242-.236c.868.293 1.075 1.15.986 1.745-.075.52-.405.996-.865 1.365zM20.024 14.5c-.925.005-1.782-.095-3.237-.421l.164-4.664c1.84-.216 3.746.348 3.84 1.124.163 1.285-.503 3.921-3.662 3.96h-.005z"/></svg>
                         <span>Ko-fi</span>
@@ -62,23 +78,12 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </nav>
-
-    <main class="container">
-        <header class="hero">
-            <div class="badge">
-                <span class="dot"></span>
-                Ecosystem Online
-            </div>
-            <h1>The new standard<br><span>for media streaming.</span></h1>
-            <p>A beautifully crafted ecosystem of applications designed for performance, elegance, and absolute control over your entertainment.</p>
         </header>
 
         <div id="apps" class="grid-layout">
             
             <!-- Orion+ -->
-            <div class="card" id="card-orionplus">
+            <div class="card reveal" id="card-orionplus">
                 <div class="card-flipper">
                     <!-- FRONT -->
                     <div class="card-front">
@@ -99,6 +104,7 @@
                             </div>
                             
                             <p class="description">The ultimate Android streaming center. Experience Live TV, Movies, and Shows through a pristine, ad-free interface built for the modern era.</p>
+                            
 
                             <div class="card-bottom">
                                 <div class="metrics">
@@ -140,7 +146,7 @@
             </div>
 
             <!-- Sonix Music -->
-            <div class="card" id="card-sonix">
+            <div class="card reveal" id="card-sonix">
                 <div class="card-flipper">
                     <!-- FRONT -->
                     <div class="card-front">
@@ -161,6 +167,7 @@
                             </div>
                             
                             <p class="description">A high-fidelity music experience for Windows. Organize and play your local library without compromises.</p>
+                            
 
                             <div class="card-bottom">
                                 <div class="metrics">
@@ -202,7 +209,7 @@
             </div>
 
             <!-- AetherStream -->
-            <div class="card" id="card-aetherstream">
+            <div class="card reveal" id="card-aetherstream">
                 <div class="card-flipper">
                     <!-- FRONT -->
                     <div class="card-front">
@@ -223,6 +230,7 @@
                             </div>
                             
                             <p class="description">Experimental cross-platform media streaming. Pushing the boundaries of what's technically possible.</p>
+                            
 
                             <div class="card-bottom">
                                 <div class="metrics">
@@ -403,7 +411,27 @@
             document.getElementById(`card-${repoKey}`).classList.remove('flipped');
         }
 
-        document.addEventListener('DOMContentLoaded', loadAllStats);
+                // --- SCROLL ANIMATION ---
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            loadAllStats();
+            initScrollAnimations();
+        });
     </script>
 </body>
 </html>
+
+
+
+
